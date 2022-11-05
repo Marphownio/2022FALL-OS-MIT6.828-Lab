@@ -197,7 +197,7 @@ env_setup_vm(struct Env *e)
 	}
 
 	//initialize the kernel portion of the new environment's address space.
-	for(i; i<NENV; i++){
+	for(i; i<NPDENTRIES; i++){
 		e->env_pgdir[i] = kern_pgdir[i];
 	}
 	// UVPT maps the env's own page table read-only.
